@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Headon Hospitality Pvt Ltd | Diversified Business Group in India</title>
+  <meta name="description" content="Headon Hospitality Pvt Ltd is an India-based diversified business group focused on trust, quality, leadership excellence, sustainable growth across beverages, FMCG, stationery, gifts, crockery, water, and consultancy." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --color-primary:#1d4ed8;
+      --color-primary-light:#60a5fa;
+      --color-primary-dark:#1e3a8a;
+      --color-secondary:#0f766e;
+      --color-accent:#c69214;
+      --color-orange:#ea580c;
+      --color-orange-light:#f97316;
+      --color-bg-default:#ffffff;
+      --color-bg-dark:#0f172a;
+      --color-bg-muted:#f1f5f9;
+      --color-bg-accent:#fef3c7;
+      --color-text-primary:#0f172a;
+      --color-text-secondary:#475569;
+      --color-text-inverse:#f8fafc;
+      --color-border:#dbe3ee;
+      --font-heading:"Plus Jakarta Sans",sans-serif;
+      --font-body:"Source Sans 3",sans-serif;
+      --gradient-hero:linear-gradient(135deg, #1e3a8a, #1d4ed8, #0f766e);
+      --shadow-card:0 10px 30px 0 rgba(15,23,42,0.08);
+      --shadow-card-hover:0 20px 40px 0 rgba(15,23,42,0.12);
+      --radius-card:24px;
+      --radius-button:14px;
+    }
+    *{margin:0; padding:0; box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--color-bg-default);font-family:var(--font-body);}
+    .animate-in{animation:fadeSlideIn 0.6s ease forwards;}
+    @keyframes fadeSlideIn{
+      from{opacity:0;transform:translateY(30px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+    header{
+      transition:background 0.3s ease, box-shadow 0.3s ease;
+      background:color-mix(in srgb, var(--color-bg-default) 95%, transparent);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid transparent;
+    }
+    header.scrolled{
+      background:var(--color-bg-default);
+      border-bottom:1px solid var(--color-border);
+      box-shadow:0 8px 25px rgba(0,0,0,0.05);
+    }
+    .btn{
+      transition:all 0.25s ease;
+      display:inline-flex;align-items:center;justify-content:center;
+      text-decoration:none;font-weight:600;font-family:var(--font-body);
+      padding:0.8rem 1.5rem;border-radius:var(--radius-button);
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+    .card{
+      border:1px solid var(--color-border);
+      border-radius:var(--radius-card);
+      box-shadow:var(--shadow-card);
+      transition:all 0.3s ease;
+      background:white;
+    }
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card-hover);}
+    .badge-brand{
+      background:linear-gradient(135deg,#e0e7ff,#c7d2fe);
+      color:#1e3a8a;
+      font-weight:600;
+      font-size:0.7rem;
+      padding:0.25rem 0.9rem;
+      border-radius:999px;
+    }
+    .footer-premium {
+      background: linear-gradient(115deg, #0B1120 0%, #111827 100%);
+      border-top: 1px solid rgba(234,88,12,0.2);
+      position: relative;
+    }
+    .footer-premium::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #ea580c, #f97316, #f59e0b);
+    }
+    .footer-link-light {
+      transition: all 0.2s ease;
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size:0.9rem;
+      display: inline-block;
+    }
+    .footer-link-light:hover {
+      color: #f97316;
+      transform: translateX(5px);
+    }
+    .social-icon-premium {
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      color: #94a3b8;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+      font-weight:bold;
+    }
+    .social-icon-premium:hover {
+      background: #ea580c;
+      color: white;
+      transform: translateY(-3px);
+    }
+    /* ===== PERFECT LOGO WITH ORANGE_LOGO.JPG - CENTERED & BEAUTIFUL ===== */
+    .custom-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+    .logo-img {
+      height: 101px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+      display: block;
+    }
+    .logo-img:hover {
+      transform: scale(1.02);
+    }
+    .logo-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .logo-text-main {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.35rem;
+      background: linear-gradient(125deg, #1e3a8a, #1d4ed8, #ea580c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    .logo-badge {
+      background: #fef3c7;
+      color: #9a3412;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      width: fit-content;
+    }
+    @media (max-width: 768px) {
+      .logo-img { height: 42px; max-width: 130px; }
+      .logo-text-main { font-size: 1rem; }
+      .custom-logo { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with YOUR ORANGE_LOGO.JPG - Properly Centered -->
+  <header class="sticky top-0 z-50 py-3">
+    <nav class="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between gap-4">
+      <!-- YOUR ORANGE LOGO IMAGE - PERFECTLY ALIGNED -->
+      <a href="#home" class="custom-logo">
+        <img src="xcvb.png" alt="Headon Hospitality Orange Logo" class="logo-img" onerror="this.onerror=null; this.src='https://placehold.co/180x55/f97316/white?text=Headon';">
+        <div class="logo-text-wrapper">
+          <div class="flex items-center flex-wrap gap-2">
+            <span class="logo-text-main">Headon Hospitality</span>
+            <span class="logo-badge hidden sm:inline-block">Pvt Ltd</span>
+          </div>
+          <span class="text-[10px] font-medium text-orange-600 bg-orange-50 px-2 py-0.5 rounded-full mt-0.5 w-fit">India's Trusted Group</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#about" class="text-gray-700 hover:text-orange-600 font-medium transition duration-200">About</a>
+        <a href="#segments" class="text-gray-700 hover:text-orange-600 font-medium transition">Verticals</a>
+        <a href="#stationery" class="text-gray-700 hover:text-orange-600 font-medium transition">Stationery & Gifts</a>
+        <a href="#crockery" class="text-gray-700 hover:text-orange-600 font-medium transition">Crockery</a>
+        <a href="#consultancy" class="text-gray-700 hover:text-orange-600 font-medium transition">Consultancy</a>
+        <a href="#contact" class="btn bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-md">Partner Now →</a>
+      </div>
+      
+      <button id="menuBtn" class="md:hidden p-2 border rounded-xl bg-white shadow-sm">☰</button>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="hidden md:hidden px-4 pb-4">
+      <div class="flex flex-col gap-3 p-5 card bg-white">
+        <a href="#about" class="py-2 font-medium border-b">About</a>
+        <a href="#segments" class="py-2 font-medium border-b">Verticals</a>
+        <a href="#stationery" class="py-2 font-medium border-b">Stationery & Gifts</a>
+        <a href="#crockery" class="py-2 font-medium border-b">Crockery</a>
+        <a href="#consultancy" class="py-2 font-medium border-b">Consultancy</a>
+        <a href="#contact" class="btn bg-orange-600 text-white text-center mt-2">Partner Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="py-20 md:py-28 pt-32 relative overflow-hidden" style="background:var(--gradient-hero);">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      <div class="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="animate-in">
+          <span class="inline-block bg-white/20 text-white px-5 py-1.5 rounded-full text-sm backdrop-blur-sm font-medium">✨ India-Based Diversified Group</span>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl mt-6 font-bold text-white leading-tight">Trust. Quality. <span class="text-orange-300">Leadership</span> Across 8+ Verticals.</h1>
+          <p class="text-lg md:text-xl mt-6 text-white/90 leading-relaxed">Wholesale, retail, distribution & consultancy — from packaged water & FMCG to stationery, crockery, and strategic HR solutions.</p>
+          <div class="mt-10 flex gap-5 flex-wrap">
+            <a href="#segments" class="btn bg-white text-orange-600 shadow-xl hover:shadow-2xl">Explore Business →</a>
+            <a href="#contact" class="btn border-2 border-white text-white bg-transparent hover:bg-white/10">Partner With Us</a>
+          </div>
+        </div>
+        <div class="card p-7 bg-white/15 backdrop-blur-md border-white/30 animate-in">
+          <p class="text-sm text-white/80 uppercase tracking-wider">Vision 2030</p>
+          <p class="text-2xl md:text-3xl font-bold text-white mt-3 leading-tight">India’s most trusted diversified group through innovation & operational excellence.</p>
+          <p class="mt-5 text-white/80">Ethical practices, long-term trust, and stakeholder value across every business unit.</p>
+          <div class="mt-6 flex gap-2 text-white/60 text-sm">✓ 500+ Channel Partners  ✓ Pan-India Presence</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Segments -->
+    <section id="segments" class="py-20 md:py-28 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="text-orange-600 font-semibold text-sm uppercase tracking-wide">What We Do</span>
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mt-2">Our Business <span class="text-orange-600">Verticals</span></h2>
+          <p class="mt-4 text-gray-600">Diversified expertise across FMCG, stationery, houseware, water solutions, consultancy, and emerging food brands.</p>
+        </div>
+        <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card p-7 bg-white hover:border-orange-200"><div class="text-4xl mb-4">💧</div><h3 class="text-xl font-bold">Packaged Drinking Water</h3><p class="text-gray-600 mt-2">Eco Clear, Neo H2O, Delhi Jeera — trusted purity with refreshing taste.</p><div class="flex flex-wrap gap-2 mt-4"><span class="badge-brand">Eco Clear</span><span class="badge-brand">Neo H2O</span><span class="badge-brand">Delhi Jeera</span></div></div>
+          <div class="card p-7 bg-gradient-to-br from-amber-50 to-orange-50 border-orange-200"><div class="text-4xl mb-4">🥜✨</div><h3 class="text-xl font-bold text-amber-800">Faux Nut (Makhana)</h3><p class="text-gray-700 mt-2">Premium roasted makhana — healthy, crunchy, guilt-free snacking. Peri-Peri, Cream & Onion, Classic Salted.</p><div class="mt-3 inline-block bg-orange-500 text-white text-xs px-3 py-1 rounded-full">NEW FMCG LAUNCH</div></div>
+          <div class="card p-7 bg-white"><div class="text-4xl mb-4">✏️📦</div><h3 class="text-xl font-bold">Stationery & Gifts</h3><p class="text-gray-600 mt-2">Authorized wholesaler: Classmate, Doms, Linc, Apsara. Corporate gifting solutions.</p><div class="flex flex-wrap gap-2 mt-4"><span class="badge-brand">Classmate</span><span class="badge-brand">Doms</span><span class="badge-brand">Linc</span><span class="badge-brand">Apsara</span></div></div>
+          <div class="card p-7 bg-white"><div class="text-4xl mb-4">🍽️</div><h3 class="text-xl font-bold">Crockery & Houseware</h3><p class="text-gray-600 mt-2">Milton, Cello, Treo, Laopala, Borosil — premium glassware & kitchen essentials.</p><div class="flex flex-wrap gap-2 mt-4"><span class="badge-brand">Milton</span><span class="badge-brand">Cello</span><span class="badge-brand">Laopala</span></div></div>
+          <div class="card p-7 bg-white"><div class="text-4xl mb-4">📊👥</div><h3 class="text-xl font-bold">Sales & HR Consultancy</h3><p class="text-gray-600 mt-2">Strategic HR advisory, talent acquisition, sales force effectiveness, OD interventions.</p><div class="mt-2 text-orange-600 text-sm font-semibold">New Addition</div></div>
+          <div class="card p-7 bg-white"><div class="text-4xl mb-4">🚚</div><h3 class="text-xl font-bold">Distribution Network</h3><p class="text-gray-600 mt-2">Pan-India distribution — FMCG, beverages, stationery, houseware. Strong channel ecosystem.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stationery Detailed -->
+    <section id="stationery" class="py-20 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="text-center md:text-left md:flex md:justify-between md:items-end gap-6">
+          <div><span class="text-orange-600 font-semibold text-sm uppercase">Wholesale & Retail Partner</span><h2 class="text-3xl md:text-4xl font-bold mt-2">Stationery & <span class="text-orange-600">Corporate Gifting</span></h2><p class="text-gray-600 max-w-2xl mt-3">Authorized wholesaler and retailer of India's most trusted stationery brands. One stop solution for school supplies, office products & custom gift boxes.</p></div>
+        </div>
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="text-center p-6 border-2 rounded-2xl hover:shadow-xl transition bg-white hover:border-orange-300"><div class="text-3xl mb-2">📓</div><div class="font-bold text-xl text-blue-800">Classmate</div><p class="text-sm text-gray-500">Notebooks, Registers</p></div>
+          <div class="text-center p-6 border-2 rounded-2xl hover:shadow-xl transition bg-white hover:border-orange-300"><div class="text-3xl mb-2">🎨</div><div class="font-bold text-xl text-green-700">Doms</div><p class="text-sm text-gray-500">Colors, Markers, Art</p></div>
+          <div class="text-center p-6 border-2 rounded-2xl hover:shadow-xl transition bg-white hover:border-orange-300"><div class="text-3xl mb-2">✒️</div><div class="font-bold text-xl text-purple-700">Linc</div><p class="text-sm text-gray-500">Pens, Gel pens</p></div>
+          <div class="text-center p-6 border-2 rounded-2xl hover:shadow-xl transition bg-white hover:border-orange-300"><div class="text-3xl mb-2">✏️</div><div class="font-bold text-xl text-amber-700">Apsara</div><p class="text-sm text-gray-500">Pencils, Erasers</p></div>
+        </div>
+        <div class="mt-10 bg-gradient-to-r from-orange-50 to-amber-50 p-7 rounded-2xl border border-orange-100"><h3 class="font-bold text-lg flex items-center gap-2">🎁 Premium Gifting & Corporate Kits</h3><p class="text-gray-700 mt-1">Customized gift sets: Diwali hampers, employee onboarding kits, school supplies bulk orders, premium pen sets. Pan-India supply with attractive packaging.</p></div>
+      </div>
+    </section>
+
+    <!-- Crockery Section -->
+    <section id="crockery" class="py-20 md:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold">Premium <span class="text-orange-600">Crockery & Houseware</span> Supply</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-3">Trusted supplier of top glassware, dinner sets, kitchen appliances, and drinkware brands for hotels, retail, and bulk orders.</p>
+        <div class="mt-12 grid md:grid-cols-3 gap-8">
+          <div class="card p-8 bg-white text-center"><div class="text-5xl mb-3">🍶</div><h3 class="font-bold text-2xl">Milton</h3><p class="text-gray-500 mt-1">Thermoware, Flasks, Bottles</p></div>
+          <div class="card p-8 bg-white text-center"><div class="text-5xl mb-3">🥛</div><h3 class="font-bold text-2xl">Cello</h3><p class="text-gray-500 mt-1">Drinkware, Serveware, Storage</p></div>
+          <div class="card p-8 bg-white text-center"><div class="text-5xl mb-3">🍷</div><h3 class="font-bold text-2xl">Treo & Laopala</h3><p class="text-gray-500 mt-1">Premium glassware, dinner sets</p></div>
+        </div>
+        <div class="mt-8 inline-block bg-orange-100 text-orange-800 px-5 py-2 rounded-full text-sm">Bulk supply for hotels, corporate events, retail partners</div>
+      </div>
+    </section>
+
+    <!-- Consultancy -->
+    <section id="consultancy" class="py-20 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div><span class="bg-orange-100 text-orange-700 px-4 py-1.5 rounded-full text-sm">Strategic Advisory</span><h2 class="text-3xl md:text-4xl font-bold mt-4">Sales & HR <span class="text-orange-600">Consultancy Services</span></h2><p class="text-gray-600 mt-4 text-lg">Empowering businesses with human capital strategy and sales transformation. We help SMEs and large enterprises build high-performance teams.</p><ul class="mt-6 space-y-3 text-gray-700"><li>✓ Talent Acquisition & Leadership Hiring</li><li>✓ Sales Force Effectiveness & CRM Implementation</li><li>✓ Performance Management Systems & L&D</li><li>✓ HR Audit, Policy Design & Compliance</li><li>✓ Organizational Development & Change Management</li></ul><a href="#contact" class="inline-block mt-8 bg-gradient-to-r from-orange-600 to-orange-500 text-white px-8 py-3 rounded-xl font-semibold shadow-lg">Consult with Experts →</a></div>
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl border border-orange-100"><p class="italic text-gray-700 text-lg">"Headon's consultancy vertical bridges the gap between business goals and people strategy — measurable outcomes, ethical frameworks."</p><div class="mt-6 flex items-center gap-4"><div class="w-14 h-14 bg-gradient-to-r from-orange-600 to-orange-500 rounded-full flex items-center justify-center text-white text-xl font-bold">AG</div><div><p class="font-bold text-lg">Amrit Gaurav</p><p class="text-sm text-gray-500">Lead Consultant - HR & Sales</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Makhana Section -->
+    <section class="py-20 md:py-24 bg-gradient-to-r from-orange-50 to-amber-50">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 text-center">
+        <span class="bg-orange-200 text-orange-800 px-5 py-1.5 rounded-full text-sm font-bold">✨ New FMCG Launch ✨</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-5 text-gray-900">Faux Nut <span class="text-orange-600">Makhana</span></h2>
+        <p class="text-xl text-gray-700 max-w-2xl mx-auto mt-3">Crunchy. Healthy. Irresistible. India's premium roasted makhana — guilt-free super snack.</p>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="bg-white rounded-2xl p-7 shadow-xl hover:shadow-2xl transition"><div class="text-4xl">🌶️</div><h3 class="font-bold text-xl mt-2">Peri-Peri Blast</h3><p class="text-gray-500">Spicy, tangy, bold crunch</p></div>
+          <div class="bg-white rounded-2xl p-7 shadow-xl hover:shadow-2xl transition"><div class="text-4xl">🧅</div><h3 class="font-bold text-xl mt-2">Cream & Onion</h3><p class="text-gray-500">Smooth, savoury, addictive</p></div>
+          <div class="bg-white rounded-2xl p-7 shadow-xl hover:shadow-2xl transition"><div class="text-4xl">🧂</div><h3 class="font-bold text-xl mt-2">Classic Salted</h3><p class="text-gray-500">Pure, light, everyday delight</p></div>
+        </div>
+        <p class="mt-8 text-gray-600 bg-white/60 inline-block px-6 py-2 rounded-full">Launching across modern trade, e-com, and general trade. Bulk wholesale & private labelling available.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 md:py-24 bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <p class="text-8xl font-black text-white/5">TRUST</p>
+        <h2 class="text-3xl md:text-5xl font-bold mt-2">What Our Partners Say</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="card p-7 bg-white/10 backdrop-blur-sm border-white/20"><p class="italic text-lg">“Consistent quality and reliable distribution — Headon delivers on every promise.”</p><div class="mt-5 font-bold text-orange-300">— R. Khanna, Dist. Partner</div></div>
+          <div class="card p-7 bg-white/10 backdrop-blur-sm border-white/20"><p class="italic text-lg">“Their stationery & gifting solutions helped us scale school supplies across 50+ retailers.”</p><div class="mt-5 font-bold text-orange-300">— A. Sinha, Retail Chain</div></div>
+          <div class="card p-7 bg-white/10 backdrop-blur-sm border-white/20"><p class="italic text-lg">“HR consultancy vertical restructured our sales team — incredible ROI.”</p><div class="mt-5 font-bold text-orange-300">— P. Mehta, Consulting Client</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 md:py-24 bg-gradient-to-br from-white to-orange-50/40">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12">
+        <div><h2 class="text-3xl md:text-5xl font-bold text-gray-900">Let's Build <span class="text-orange-600">Together</span></h2><p class="mt-5 text-gray-700 text-lg">Wholesale partnership, distribution, bulk orders for stationery, crockery, water, makhana, or HR consultancy — reach out to our team.</p><div class="mt-8 space-y-4 text-gray-700"><p class="flex items-center gap-3">📞 <span class="font-semibold">+91 22 4160 2200</span></p><p class="flex items-center gap-3">✉️ <span class="font-semibold">sales@headonhospitality.com</span></p><p class="flex items-center gap-3">📍 Mumbai | Delhi NCR | Bengaluru</p></div><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&fit=crop" alt="business team" class="mt-8 rounded-2xl shadow-xl w-full object-cover h-64"></div>
+        <form class="card p-8 bg-white shadow-2xl" id="contactForm"><label class="font-semibold">Full Name</label><input type="text" required class="w-full mt-1 mb-4 p-3 border rounded-xl focus:ring-2 focus:ring-orange-400"><label class="font-semibold">Work Email</label><input type="email" required class="w-full mt-1 mb-4 p-3 border rounded-xl focus:ring-2 focus:ring-orange-400"><label class="font-semibold">Product / Service Interest</label><select class="w-full mt-1 mb-4 p-3 border rounded-xl bg-white"><option>Stationery & Gifts (Classmate, Doms, Linc, Apsara)</option><option>Crockery (Milton, Cello, Laopala, Treo)</option><option>Packaged Water (Eco Clear, Neo H2O, Delhi Jeera)</option><option>Faux Nut Makhana</option><option>Sales & HR Consultancy</option><option>Distribution Partnership</option></select><label class="font-semibold">Message</label><textarea rows="4" class="w-full mt-1 mb-5 p-3 border rounded-xl"></textarea><button type="submit" class="btn bg-gradient-to-r from-orange-600 to-orange-500 text-white w-full text-lg">Send Inquiry →</button></form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-premium pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div><h3 class="text-2xl font-bold text-white">Headon Hospitality</h3><p class="text-gray-400 text-sm mt-3 leading-relaxed">Diversified group delivering excellence in FMCG, stationery, crockery, packaged water, consultancy and emerging food brands like Faux Nut Makhana.</p><div class="flex gap-3 mt-5"><a href="#" class="social-icon-premium">in</a><a href="#" class="social-icon-premium">tw</a><a href="#" class="social-icon-premium">ig</a></div></div>
+        <div><h4 class="text-white font-semibold text-lg">Quick Links</h4><ul class="mt-4 space-y-2"><li><a href="#stationery" class="footer-link-light">📚 Stationery & Gifts</a></li><li><a href="#crockery" class="footer-link-light">🍽️ Crockery & Houseware</a></li><li><a href="#consultancy" class="footer-link-light">📈 HR & Sales Consultancy</a></li><li><a href="#segments" class="footer-link-light">💧 Water & Makhana</a></li></ul></div>
+        <div><h4 class="text-white font-semibold text-lg">Our Brands</h4><ul class="mt-4 space-y-1 text-gray-400 text-sm"><li>⭐ Classmate, Doms, Linc, Apsara</li><li>⭐ Milton, Cello, Laopala, Treo</li><li>⭐ Eco Clear, Neo H2O, Delhi Jeera</li><li>⭐ Faux Nut Makhana (FMCG)</li></ul></div>
+        <div><h4 class="text-white font-semibold text-lg">Connect</h4><p class="text-gray-400 text-sm mt-3">📞 +91 22 4160 2200</p><p class="text-gray-400 text-sm">✉️ connect@headonhospitality.com</p><div class="mt-5"><input type="email" placeholder="Subscribe for updates" class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm w-full border border-gray-700"><button class="mt-2 bg-orange-600 w-full py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Subscribe</button></div></div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">© <span id="year"></span> Headon Hospitality Pvt Ltd — Trust. Quality. Leadership Excellence across industries.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    window.addEventListener('scroll', () => { document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50); });
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => { e.preventDefault(); alert("Thank you! Our team will connect within 24 hours."); e.target.reset(); });
+    document.querySelectorAll('#mobileNav a').forEach(l => l.addEventListener('click', () => mobileNav.classList.add('hidden')));
+  </script>
+</body>
+</html>
